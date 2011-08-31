@@ -1,0 +1,31 @@
+<h1>Pager Today?</h1>
+<h2>Users</h2>
+<table>
+  <tr>
+    <th>Users</th>
+    <th>Daily</th>
+    <th>Backup</th>
+  </tr>
+  <tr>
+    <td>All</td>
+    <td><%= link_to 'iCal', entries_path('daily', :format => :ics)  %></td>
+    <td><%= link_to 'iCal', entries_path('daily-backup', :format => :ics)  %></td>
+  </tr>
+<% @users.each do |user| %>
+  <tr>
+    <td><%= link_to user.name, user_path(user)  %></td>
+    <td><%= link_to 'iCal', user_entries_path(:user => user, :id => 'daily', :format => :ics)  %></td>
+    <td><%= link_to 'iCal', user_entries_path(:user => user, :id => 'daily-backup', :format => :ics)  %></td>
+  </tr>
+<% end %>
+</table>
+
+<h2>Subscribe to a calendar feed in iCal</h2>
+
+<ul>
+  <li>copy the iCal link (above) to the clipboard</li>
+  <li>go to iCal.app on your desktop</li>
+  <li>select "Calendar" -> "Subscribe" from the menu</li>
+  <li>paste the url and hit [enter]</li>
+  <li>enter the HTTP auth username and password (if needed)</li>
+</ul>

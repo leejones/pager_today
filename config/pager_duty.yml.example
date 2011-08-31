@@ -1,0 +1,19 @@
+:auth_email: joe@example.com
+:auth_password: sekritpazzw@rd
+:account_subdomain: example
+:users:
+  -
+    :id: S40LSK7
+    :name: Joe Example
+    :email: joe@example.com
+  -
+    :id: R23LOK8
+    :name: Jill Example
+    :email: jill@example.com
+:schedules:
+  -
+    :id: QKPUFPM
+    :name: daily
+  -
+    :id: PU2EMIZ
+    :name: daily-backup

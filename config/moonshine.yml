@@ -1,0 +1,21 @@
+:ruby: ree187
+:application: pager_today
+:user: rails
+:time_zone: America/New_York
+:deploy_to: /srv/pager_today
+:domain: pagertoday.yourserver.com
+:repository: git@github.com:yourfork/pager_today.git
+:shared_config:
+ - config/pager_duty.yml
+:shared_children:
+- system
+- log
+- pids
+- config
+:passenger:
+  :max_pool_size: 3
+:mysql:
+  :innodb_buffer_pool_size: 128M
+:apache:
+  :users:
+    :yourusername: yourpassword

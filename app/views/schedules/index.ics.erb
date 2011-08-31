@@ -1,0 +1,11 @@
+<%=
+RiCal.Calendar do |cal|
+  @entries.each do |entry|
+    cal.event do |event|
+      event.summary = entry['user']['name']
+      event.dtstart =  DateTime.parse(entry['start'])
+      event.dtend = DateTime.parse(entry['end'])
+    end
+  end
+end
+%>

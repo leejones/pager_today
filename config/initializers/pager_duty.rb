@@ -1,0 +1,1 @@
+PagerDuty.config = YAML.load_file(File.join(Rails.root, 'config/pager_duty.yml'))
